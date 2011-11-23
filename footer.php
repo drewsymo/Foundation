@@ -4,18 +4,6 @@
 	<!-- Fallback to local copy of jQuery if Google's CDN Fails --> 
 	<script type="text/javascript">!window.jQuery && document.write('<script src="<?php bloginfo ("template_url"); ?>/javascripts/jquery.min.js"><\/script>')</script>
 	
-	<!-- Combine and Compress These JS Files -->
-	<script src="<?php bloginfo ("template_url"); ?>/javascripts/jquery.min.js"></script>
-	<script src="<?php bloginfo ("template_url"); ?>/javascripts/jquery.reveal.js"></script>
-	<script src="<?php bloginfo ("template_url"); ?>/javascripts/jquery.orbit-1.3.0.js"></script>
-	<script src="<?php bloginfo ("template_url"); ?>/javascripts/forms.jquery.js"></script>
-	<script src="<?php bloginfo ("template_url"); ?>/javascripts/jquery.customforms.js"></script>
-	<script src="<?php bloginfo ("template_url"); ?>/javascripts/jquery.placeholder.min.js"></script>
-	<script src="<?php bloginfo ("template_url"); ?>/javascripts/jswipe.js"></script>
-	<script src="<?php bloginfo ("template_url"); ?>/javascripts/tooltip.js"></script>
-	<!-- End Combine and Compress These JS Files -->
-	<script src="<?php bloginfo ("template_url"); ?>/javascripts/app.js"></script>
-	
 	<!-- Change UA-XXXXX-X to be your site's Google Analytics ID (this is an optimised version, see: http://mathiasbynens.be/notes/async-analytics-snippet -->
 	<script>
 		var _gaq = _gaq || [];
