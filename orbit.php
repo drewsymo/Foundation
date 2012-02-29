@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div id="featured">
 
-	<?php SliderContent(); ?>
+	<?php echo SliderContent(); ?>
 	
 </div>	
 

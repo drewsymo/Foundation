@@ -11,11 +11,11 @@
 				
 			<!-- Display the Title as a link to the Post's permalink. -->
 			<h2>
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php _e('Permanent Link to', 'Foundation') ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 			</h2>
 			
 			<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
-			<?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?>
+			<?php the_time('F jS, Y') ?> <?php _e('by', 'Foundation') ?> <?php the_author_posts_link() ?>
 			
 			<!-- Display the Post's Content in a div box. -->
 			<div class="entry">
@@ -23,7 +23,7 @@
 			</div>
 			
 			<!-- Display a comma separated list of the Post's Categories. -->
-			<p class="postmetadata">Posted in <?php the_category(', '); ?></p>
+			<p class="postmetadata"><?php _e('Posted in', 'Foundation') ?> <?php the_category(', '); ?></p>
 			
 	        <span class="comment-count"><?php comments_popup_link('Leave a comment', '1 Comment', '% Comments'); ?></span>  
 		
@@ -36,7 +36,7 @@
 	
 		<!-- The very first "if" tested to see if there were any Posts to -->
 		<!-- display.  This "else" part tells what do if there weren't any. -->
-		<p>Sorry, no posts matched your criteria.</p>
+		<p><?php _e('Sorry, no posts matched your criteria.', 'Foundation') ?></p>
 	
 	<!--End the loop -->
 	<?php endif; ?>

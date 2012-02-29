@@ -7,6 +7,13 @@ function remove_generators() {
 
 add_filter('the_generator','remove_generators');
 
+// Add localization
+add_action('after_setup_theme', 'localization_setup');
+function localization_setup(){
+    load_theme_textdomain('Foundation', get_template_directory() . '/languages');
+}
+
+
 // Add thumbnail support
 
 add_theme_support( 'post-thumbnails' );
@@ -142,31 +149,52 @@ function Orbit(){
 		register_post_type('Orbit', $Orbit_args);
 }
 
+// This adds css to the header file to give the custom post types icons.
+// By Ethanhackett - https://github.com/drewsymo/Foundation/issues/31
+add_action( 'admin_head', 'cpt_icons' );
+function cpt_icons() {
+    ?>
+    <style type="text/css" media="screen">
+        #menu-posts-orbit .wp-menu-image {
+            background: url(<?php bloginfo('template_url') ?>/images/orbit.png) no-repeat 6px -17px !important;
+        }
+        #menu-posts-orbit:hover .wp-menu-image, #menu-posts-POSTTYPE.wp-has-current-submenu .wp-menu-image {
+            background-position:6px 7px!important;
+        }
+    </style>
+<?php }
+
 function SliderContent(){
 
 	$args = array( 'post_type' => 'Orbit');
 	$loop = new WP_Query( $args );
-	
+
 		while ( $loop->have_posts() ) : $loop->the_post();
-		
+
 			if(has_post_thumbnail()) {
-			
-				the_post_thumbnail();
-				
+
+				return get_the_post_thumbnail();
+
 			} else {
-			
-				echo '<div class="content" style="background:#FFF;">';
-			
-					the_title();
-					the_content();
-					
-				echo '</div>';
-			
+
+				return '<div class="content" style="background:#FFF;">' .
+
+					get_the_title() . 
+					get_the_content() . 
+
+				'</div>';
+
 			}
-		
+
 		endwhile;
-		
+
 }
+
+// [SliderContent]
+function SliderContent_func( $atts ){
+	return SliderContent();
+}
+add_shortcode( 'SliderContent', 'SliderContent_func' );
 
 
 
@@ -305,5 +333,7 @@ function emm_paginate_loop($start, $max, $page = 0) {
 	return $output;
 } 
 
-
+wp_enqueue_script('jquery');
+wp_enqueue_script('modernizr', get_template_directory_uri() . '/javascripts/modernizr.js', 'jquery', false);
+wp_enqueue_script('reveal', get_template_directory_uri() . '/javascripts/jquery.reveal.js', 'jquery', false);
 ?>

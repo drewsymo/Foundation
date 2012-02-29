@@ -1,8 +1,8 @@
 /* 
-Theme Name: Foundation, for WordPress
-Theme URI: http://www.drewsymo.com
-Description: A Responsive Starter Theme
-Author: @FoundationZURB, @drewsymo
+Theme Name: Emptyhead Foundation
+Theme URI: http://www.emptyhead
+Description: Foundation
+Author: Matt
 Author URI: 
 Version: 3.0
 License: MIT License
@@ -10,5 +10,6 @@ License URI: http://www.opensource.org/licenses/mit-license.php
 */
 
 @import url("stylesheets/foundation.css");
+@import url("stylesheets/responsive.css");
 @import url("stylesheets/app.css");
 [if lt IE 9] @import url("stylesheets/ie.css");

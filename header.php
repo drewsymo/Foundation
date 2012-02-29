@@ -36,7 +36,7 @@
 				<!-- Header Column -->
 				<div class="twelve columns" id="access" role="navigation">
 					
-					<span id="skipnav" class="show-on-phones"><a href="#content">Skip to Content?</a></span>
+					<span id="skipnav" class="show-on-phones"><a href="#content"><?php _e('Skip to Content?', 'Foundation') ?></a></span>
 				
 					<!-- Site Description & Title -->
 					<hgroup id="header">

@@ -47,7 +47,7 @@ Just head into your admin panel, and:
 	<div class="row">
 		<div class="twelve columns">
 			<div id="featured"> 
-				<?php SliderContent(); ?>
+				<?php echo SliderContent(); ?>
 			</div>
 		</div>
 	</div>

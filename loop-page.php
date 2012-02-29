@@ -26,7 +26,7 @@
 	
 		<!-- The very first "if" tested to see if there were any Posts to -->
 		<!-- display.  This "else" part tells what do if there weren't any. -->
-		<div class="alert-box error">Sorry, the page you requested was not found</div>
+		<div class="alert-box error"><?php _e('Sorry, the page you requested was not found', 'Foundation') ?></div>
 	
 	<!--End the loop -->
 	<?php endif; ?>
