@@ -44,6 +44,9 @@ add_action( 'after_setup_theme', 'foundation_setup' );
 function foundation_assets() {
 
 	if (!is_admin()) {
+	
+		//Load jquery
+		wp_enqueue_script('jquery');
 
 		// Load JavaScripts
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/javascripts/foundation.min.js', array(), '1.0', true );
