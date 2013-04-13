@@ -7,6 +7,8 @@ Version: 4.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: foundation
+Description: A responsive starter theme based on Foundation 4 by ZURB.
+Tags: two-columns
 */
 
 /* Artfully masterminded by ZURB  */
@@ -75,7 +77,34 @@ h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
-  
+.wp-caption-text {text-align: center;}
+.sticky { }
+.gallery-caption { }
+.bypostauthor{ }
+.site-content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-content .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-content .gallery dd {
+	margin: 0;
+}
+.site-content .gallery-columns-4 .gallery-item {
+}
+.site-content .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
 /* -----------------------------------------
    Page Name 1
 ----------------------------------------- */
