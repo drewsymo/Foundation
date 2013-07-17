@@ -2,7 +2,7 @@
 /**
  * Comments Template
  *
- * Displays 'aside' custom post format
+ * Displays post comments and the comment form.
  *
  * @package WordPress
  * @subpackage Foundation, for WordPress
