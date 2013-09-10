@@ -172,7 +172,7 @@ function foundation_shortcode_section( $atts, $content = null ) {
 		'title' => ''
 		), $atts ) );
 
-	return '<section><p class="title" data-section-title><a href="#">Section 1</a></p><div class="content" data-section-content>' . do_shortcode($content) . '</div></section>';
+	return '<section><p class="title" data-section-title><a href="#"> . esc_attr($title) . </a></p><div class="content" data-section-content>' . do_shortcode($content) . '</div></section>';
 
 }
 
