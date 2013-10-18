@@ -19,6 +19,7 @@
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
 <!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="width=device-width" />
