@@ -71,8 +71,8 @@ function foundation_assets() {
 		wp_deregister_script('jquery');
 
 		// Load JavaScripts
-		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '4.0', true );
-		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/vendor/custom.modernizr.js', null, '2.1.0');
+		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '5.0.2', true );
+		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/modernizr.js', null, '2.1.0');
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 		// Load Stylesheets
@@ -107,23 +107,18 @@ add_action('wp_footer', 'foundation_js_init', 50);
 endif;
 
 /**
- * ZeptoJS and jQuery Fallback
+ * Load jQuery
+ * Foundation 5 dropped support for Zepto
  * @see: http://foundation.zurb.com/docs/javascript.html
  */
 
-if ( ! function_exists( 'foundation_comptability' ) ) :
+if ( ! function_exists( 'foundation_jquery_init' ) ) :
 
-function foundation_comptability () {
-
-echo "<script>";
-echo "document.write('<script src=' +";
-echo "('__proto__' in {} ? '" . get_template_directory_uri() . "/js/vendor/zepto" . "' : '" . get_template_directory_uri() . "/js/vendor/jquery" . "') +";
-echo "'.js><\/script>')";
-echo "</script>";
-
+function foundation_jquery_init () {
+    echo "<script src=" . get_template_directory_uri() . "/js/jquery.js><\/script>";
 }
 
-add_action('wp_footer', 'foundation_comptability', 10);
+add_action('wp_footer', 'foundation_jquery_init', 10);
 
 endif;
 
