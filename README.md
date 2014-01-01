@@ -48,6 +48,3 @@ You can preview Foundation, for WordPress at this link:
 + [Google+](https://plus.google.com/114153589610660530694/)
 
 **Doug Johnston**
-
-+ [Blog](http://www.dojosto.com/)
-+ [Twitter](http://twitter.com/dougjohnston/)
