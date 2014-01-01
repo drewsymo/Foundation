@@ -43,6 +43,10 @@ img.size-full {
 
 .wp-caption { max-width: 100%; }
 
+.author_gravatar {
+    float: none !important; /* Override Foundation forcing this image to float left in the admin bar */
+}
+
 /* -----------------------------------------
    Posts
 ----------------------------------------- */
