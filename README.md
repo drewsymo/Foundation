@@ -46,5 +46,3 @@ You can preview Foundation, for WordPress at this link:
 + [Blog](http://drewsymo.com/)
 + [Twitter](http://twitter.com/drewsymo/)
 + [Google+](https://plus.google.com/114153589610660530694/)
-
-**Doug Johnston**
