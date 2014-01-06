@@ -9,12 +9,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: foundation
 Description: Foundation 5 for WordPress, a Responsive Starter Theme.
 Tags: two-columns
-*/
+ */
 
 /* Artfully masterminded by ZURB  */
 
 /* -------------------------------------------------- 
-   Table of Contents
+Table of Contents
 -----------------------------------------------------
 :: Images
 :: Posts
@@ -23,74 +23,120 @@ Tags: two-columns
 :: Shared Styles
 :: Page Name 1
 :: Page Name 2
-*/
+ */
 
 /* -----------------------------------------
-   Images
+Images
 ----------------------------------------- */
 
 .widget img {
-    max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+  max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
 }
 img[class*="align"],
 img[class*="wp-image-"] {
-    height: auto; /* Make sure images with WordPress-added height and width >attributes are scaled correctly */
+  height: auto; /* Make sure images with WordPress-added height and width >attributes are scaled correctly */
 }
 img.size-full {
-    max-width: 97.5%;
-    width: auto; /* Prevent stretching of full-size images with height and >>width attributes in IE8 */
+  max-width: 97.5%;
+  width: auto; /* Prevent stretching of full-size images with height and >>width attributes in IE8 */
 }
 
-.wp-caption { max-width: 100%; }
+.wp-caption { 
+  max-width: 100%; 
+}
 
 .author_gravatar {
-    float: none !important; /* Override Foundation forcing this image to float left in the admin bar */
+  float: none !important; /* Override Foundation forcing this image to float left in the admin bar */
 }
 
 /* -----------------------------------------
-   Posts
+Posts
 ----------------------------------------- */
 
-.author-box h5 {margin-top:0px;}
-.author-box .author_gravatar {margin-right:10px;}
-.author-box p {font-size:14px; font-size:1.4em;}
+.author-box h5 {
+  margin-top: 0px;
+}
 
-article .th {margin-bottom:10px; margin-bottom:1em;}
+.author-box .author_gravatar {
+  margin-right: 10px;
+}
 
-.alignleft {float:left;}
-.alignright {float:right;}
-.aligncenter {margin:0 auto;text-align:center;}
+.author-box p {
+  font-size: 14px; 
+  font-size: 1.4em;
+}
+
+article .th {
+  margin-bottom: 10px; 
+  margin-bottom: 1em;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright { 
+  float: right;
+}
+
+.aligncenter {
+  margin: 0 auto;
+  text-align: center;
+}
 
 /* -----------------------------------------
-   Typography
+Typography
 ----------------------------------------- */
 
-body,h1,h2,h3,h4,h5,h6,p {font-family: 'Open Sans', sans-serif;}
-h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
+body,h1,h2,h3,h4,h5,h6,p {
+  font-family: 'Open Sans', sans-serif;
+}
 
-.site-title .subheader {margin-bottom:0;}
+h1,h2,h3,h4,h5,h6,a:link {
+  font-weight: 300;
+}
+
+.site-title .subheader {
+  margin-bottom: 0;
+}
 
 /* -----------------------------------------
-   Header
+Header
 ----------------------------------------- */
 
-.site-header {border-bottom:1px solid #ddd;padding:1.5rem 0 1rem 0;margin:1em 0 1.875em 0;}
-.sidebar ul li {list-style:none;}
-.top-bar-section ul li>a {border-left:1px solid #333;border-right:none;}
-.top-bar-section .columns {float: none;}
+.site-header {
+  border-bottom: 1px solid #ddd;
+  padding: 1.5rem 0 1rem 0;
+  margin: 1.875em 0;
+}
+
+.sidebar ul li {
+  list-style: none;
+}
+
+.top-bar-section ul li>a {
+  border-left: 1px solid #333;
+  border-right:none;
+}
+
+.top-bar-section .columns {
+  float: none;
+}
 
 /* -----------------------------------------
-   Shared Styles
+Shared Styles
 ----------------------------------------- */
-.wp-caption-text {text-align: center;}
-.sticky { }
-.gallery-caption { }
-.bypostauthor{ }
+.wp-caption-text {
+  text-align: center;
+}
+
 .site-content .gallery {
   margin-bottom: 1.5em;
 }
+
 .gallery-caption {
 }
+
 .site-content .gallery a img {
   border: none;
   height: auto;
@@ -99,20 +145,7 @@ h1,h2,h3,h4,h5,h6,a:link {font-weight:300;}
 .site-content .gallery dd {
   margin: 0;
 }
-.site-content .gallery-columns-4 .gallery-item {
-}
-.site-content .gallery-columns-4 .gallery-item img {
-}
 
-embed,
-iframe,
-object {
+embed, iframe, object {
   max-width: 100%;
 }
-/* -----------------------------------------
-   Page Name 1
------------------------------------------ */
-
-/* -----------------------------------------
-   Page Name 2
------------------------------------------ */
