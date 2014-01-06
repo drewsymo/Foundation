@@ -5,7 +5,7 @@
  * Loop content in single post template (single.php)
  *
  * @package WordPress
- * @subpackage Foundation, for WordPress
+ * @subpackage Foundation 5, for WordPress
  * @since Foundation, for WordPress 4.0
  */
 ?>

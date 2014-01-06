@@ -6,12 +6,12 @@
  * Core functionality and initial theme setup
  *
  * @package WordPress
- * @subpackage Foundation, for WordPress
+ * @subpackage Foundation 5, for WordPress
  * @since Foundation, for WordPress 4.0
  */
 
 /**
- * Initiate Foundation, for WordPress
+ * Initiate Foundation 5, for WordPress
  */
 
 if ( ! function_exists( 'foundation_setup' ) ) :
@@ -62,17 +62,9 @@ if ( ! function_exists( 'foundation_assets' ) ) :
 function foundation_assets() {
 
 	if (!is_admin()) {
-
-		/** 
-		 * Deregister jQuery in favour of ZeptoJS
-		 * jQuery will be used as a fallback if ZeptoJS is not compatible
-		 * @see foundation_compatibility & http://foundation.zurb.com/docs/javascript.html
-		 */
-		wp_deregister_script('jquery');
-
 		// Load JavaScripts
+		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/modernizr.js', null, '2.6.2');
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '5.0.2', true );
-		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/modernizr.js', null, '2.1.0');
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 		// Load Stylesheets

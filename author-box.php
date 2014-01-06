@@ -5,7 +5,7 @@
  * Displays author box with author description and thumbnail on single posts
  *
  * @package WordPress
- * @subpackage Foundation, for WordPress
+ * @subpackage Foundation 5, for WordPress
  * @since Foundation, for WordPress 4.0
  */
 ?>
