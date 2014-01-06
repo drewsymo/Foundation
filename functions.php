@@ -62,8 +62,12 @@ if ( ! function_exists( 'foundation_assets' ) ) :
 function foundation_assets() {
 
 	if (!is_admin()) {
+                // Deregister WordPress' version of jQuery so we can specify our own
+                wp_deregister_script('jquery');
+
 		// Load JavaScripts
 		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/modernizr.js', null, '2.6.2');
+		wp_enqueue_script( 'jquery', get_template_directory_uri().'/js/jquery.js', null, '2.0.3', true);
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '5.0.2', true );
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
@@ -95,22 +99,6 @@ function foundation_js_init () {
 }
 
 add_action('wp_footer', 'foundation_js_init', 50);
-
-endif;
-
-/**
- * Load jQuery
- * Foundation 5 dropped support for Zepto
- * @see: http://foundation.zurb.com/docs/javascript.html
- */
-
-if ( ! function_exists( 'foundation_jquery_init' ) ) :
-
-function foundation_jquery_init () {
-    echo "<script src=" . get_template_directory_uri() . "/js/jquery.js><\/script>";
-}
-
-add_action('wp_footer', 'foundation_jquery_init', 10);
 
 endif;
 
