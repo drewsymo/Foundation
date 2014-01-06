@@ -13,11 +13,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header>
-		<hgroup>
-			<h2><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'foundation' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<span class="right radius success label"><?php echo get_post_format(); ?></span>
-			<h6>Written by <?php the_author_link(); ?> on <?php the_time(get_option('date_format')); ?></h6>
-		</hgroup>
+		<h2><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'foundation' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+		<span class="right radius success label"><?php echo get_post_format(); ?></span>
+		<h6>Written by <?php the_author_link(); ?> on <?php the_time(get_option('date_format')); ?></h6>
 	</header>
 
 	<?php if ( has_post_thumbnail()) : ?>
