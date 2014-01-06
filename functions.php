@@ -216,44 +216,44 @@ function foundation_widgets() {
 			'after_title' => '</h5>',
 		) );
 
-	// Sidebar Footer Column One
+	// Footer Column One
 	register_sidebar( array(
-			'id' => 'foundation_sidebar_footer_one',
-			'name' => __( 'Sidebar Footer One', 'foundation' ),
-			'description' => __( 'This sidebar is located in column one of your theme footer.', 'foundation' ),
+			'id' => 'foundation_footer_one',
+			'name' => __( 'Footer Column #1', 'foundation' ),
+			'description' => __( 'Located in column one of the footer.', 'foundation' ),
 			'before_widget' => '<div class="large-3 columns">',
 			'after_widget' => '</div>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
 
-	// Sidebar Footer Column Two
+	// Footer Column Two
 	register_sidebar( array(
-			'id' => 'foundation_sidebar_footer_two',
-			'name' => __( 'Sidebar Footer Two', 'foundation' ),
-			'description' => __( 'This sidebar is located in column two of your theme footer.', 'foundation' ),
+			'id' => 'foundation_footer_two',
+			'name' => __( 'Footer Column #2', 'foundation' ),
+			'description' => __( 'Located in column two of the footer.', 'foundation' ),
 			'before_widget' => '<div class="large-3 columns">',
 			'after_widget' => '</div>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
 
-	// Sidebar Footer Column Three
+	// Footer Column Three
 	register_sidebar( array(
-			'id' => 'foundation_sidebar_footer_three',
-			'name' => __( 'Sidebar Footer Three', 'foundation' ),
-			'description' => __( 'This sidebar is located in column three of your theme footer.', 'foundation' ),
+			'id' => 'foundation_footer_three',
+			'name' => __( 'Footer Column #3', 'foundation' ),
+			'description' => __( 'Located in column three of the footer.', 'foundation' ),
 			'before_widget' => '<div class="large-3 columns">',
 			'after_widget' => '</div>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
 
-	// Sidebar Footer Column Four
+	// Footer Column Four
 	register_sidebar( array(
-			'id' => 'foundation_sidebar_footer_four',
-			'name' => __( 'Sidebar Footer Four', 'foundation' ),
-			'description' => __( 'This sidebar is located in column four of your theme footer.', 'foundation' ),
+			'id' => 'foundation_footer_four',
+			'name' => __( 'Footer Column #4', 'foundation' ),
+			'description' => __( 'Located in column four of the footer.', 'foundation' ),
 			'before_widget' => '<div class="large-3 columns">',
 			'after_widget' => '</div>',
 			'before_title' => '<h5>',

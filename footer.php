@@ -16,7 +16,7 @@
 <!-- Footer -->
 <footer class="row">
 
-<?php if ( dynamic_sidebar('Sidebar Footer One') || dynamic_sidebar('Sidebar Footer Two') || dynamic_sidebar('Sidebar Footer Three') || dynamic_sidebar('Sidebar Footer Four')  ) : else : ?>
+<?php if ( dynamic_sidebar('Footer Column #1') || dynamic_sidebar('Footer Column #2') || dynamic_sidebar('Footer Column #3') || dynamic_sidebar('Footer Column #4')  ) : else : ?>
 
 <div class="large-12 columns">
 	<ul class="inline-list">
