@@ -6,12 +6,12 @@
  * Core functionality and initial theme setup
  *
  * @package WordPress
- * @subpackage Foundation, for WordPress
+ * @subpackage Foundation 5, for WordPress
  * @since Foundation, for WordPress 4.0
  */
 
 /**
- * Initiate Foundation, for WordPress
+ * Initiate Foundation 5, for WordPress
  */
 
 if ( ! function_exists( 'foundation_setup' ) ) :
@@ -62,17 +62,13 @@ if ( ! function_exists( 'foundation_assets' ) ) :
 function foundation_assets() {
 
 	if (!is_admin()) {
-
-		/** 
-		 * Deregister jQuery in favour of ZeptoJS
-		 * jQuery will be used as a fallback if ZeptoJS is not compatible
-		 * @see foundation_compatibility & http://foundation.zurb.com/docs/javascript.html
-		 */
-		wp_deregister_script('jquery');
+                // Deregister WordPress' version of jQuery so we can specify our own
+                wp_deregister_script('jquery');
 
 		// Load JavaScripts
-		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '4.0', true );
-		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/vendor/custom.modernizr.js', null, '2.1.0');
+		wp_enqueue_script( 'modernizr', get_template_directory_uri().'/js/modernizr.js', null, '2.6.2');
+		wp_enqueue_script( 'jquery', get_template_directory_uri().'/js/jquery.js', null, '2.0.3', true);
+		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', null, '5.0.2', true );
 		if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 		// Load Stylesheets
@@ -103,27 +99,6 @@ function foundation_js_init () {
 }
 
 add_action('wp_footer', 'foundation_js_init', 50);
-
-endif;
-
-/**
- * ZeptoJS and jQuery Fallback
- * @see: http://foundation.zurb.com/docs/javascript.html
- */
-
-if ( ! function_exists( 'foundation_comptability' ) ) :
-
-function foundation_comptability () {
-
-echo "<script>";
-echo "document.write('<script src=' +";
-echo "('__proto__' in {} ? '" . get_template_directory_uri() . "/js/vendor/zepto" . "' : '" . get_template_directory_uri() . "/js/vendor/jquery" . "') +";
-echo "'.js><\/script>')";
-echo "</script>";
-
-}
-
-add_action('wp_footer', 'foundation_comptability', 10);
 
 endif;
 
@@ -241,46 +216,46 @@ function foundation_widgets() {
 			'after_title' => '</h5>',
 		) );
 
-	// Sidebar Footer Column One
+	// Footer Column One
 	register_sidebar( array(
-			'id' => 'foundation_sidebar_footer_one',
-			'name' => __( 'Sidebar Footer One', 'foundation' ),
-			'description' => __( 'This sidebar is located in column one of your theme footer.', 'foundation' ),
-			'before_widget' => '<div class="large-3 columns">',
-			'after_widget' => '</div>',
+			'id' => 'foundation_footer_one',
+			'name' => __( 'Footer Column #1', 'foundation' ),
+			'description' => __( 'Located in column one of the footer.', 'foundation' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
 
-	// Sidebar Footer Column Two
+	// Footer Column Two
 	register_sidebar( array(
-			'id' => 'foundation_sidebar_footer_two',
-			'name' => __( 'Sidebar Footer Two', 'foundation' ),
-			'description' => __( 'This sidebar is located in column two of your theme footer.', 'foundation' ),
-			'before_widget' => '<div class="large-3 columns">',
-			'after_widget' => '</div>',
+			'id' => 'foundation_footer_two',
+			'name' => __( 'Footer Column #2', 'foundation' ),
+			'description' => __( 'Located in column two of the footer.', 'foundation' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
 
-	// Sidebar Footer Column Three
+	// Footer Column Three
 	register_sidebar( array(
-			'id' => 'foundation_sidebar_footer_three',
-			'name' => __( 'Sidebar Footer Three', 'foundation' ),
-			'description' => __( 'This sidebar is located in column three of your theme footer.', 'foundation' ),
-			'before_widget' => '<div class="large-3 columns">',
-			'after_widget' => '</div>',
+			'id' => 'foundation_footer_three',
+			'name' => __( 'Footer Column #3', 'foundation' ),
+			'description' => __( 'Located in column three of the footer.', 'foundation' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
 
-	// Sidebar Footer Column Four
+	// Footer Column Four
 	register_sidebar( array(
-			'id' => 'foundation_sidebar_footer_four',
-			'name' => __( 'Sidebar Footer Four', 'foundation' ),
-			'description' => __( 'This sidebar is located in column four of your theme footer.', 'foundation' ),
-			'before_widget' => '<div class="large-3 columns">',
-			'after_widget' => '</div>',
+			'id' => 'foundation_footer_four',
+			'name' => __( 'Footer Column #4', 'foundation' ),
+			'description' => __( 'Located in column four of the footer.', 'foundation' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );

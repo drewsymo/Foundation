@@ -5,13 +5,13 @@
  * Setup the header for our theme
  *
  * @package WordPress
- * @subpackage Foundation, for WordPress
+ * @subpackage Foundation 5, for WordPress
  * @since Foundation, for WordPress 4.0
  */
 ?>
 
 <!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
@@ -26,7 +26,6 @@
 <title><?php wp_title(); ?></title>
 
 <?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(); ?>>
