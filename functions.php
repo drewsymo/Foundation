@@ -221,8 +221,8 @@ function foundation_widgets() {
 			'id' => 'foundation_footer_one',
 			'name' => __( 'Footer Column #1', 'foundation' ),
 			'description' => __( 'Located in column one of the footer.', 'foundation' ),
-			'before_widget' => '<div class="large-3 columns">',
-			'after_widget' => '</div>',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
@@ -232,8 +232,8 @@ function foundation_widgets() {
 			'id' => 'foundation_footer_two',
 			'name' => __( 'Footer Column #2', 'foundation' ),
 			'description' => __( 'Located in column two of the footer.', 'foundation' ),
-			'before_widget' => '<div class="large-3 columns">',
-			'after_widget' => '</div>',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
@@ -243,8 +243,8 @@ function foundation_widgets() {
 			'id' => 'foundation_footer_three',
 			'name' => __( 'Footer Column #3', 'foundation' ),
 			'description' => __( 'Located in column three of the footer.', 'foundation' ),
-			'before_widget' => '<div class="large-3 columns">',
-			'after_widget' => '</div>',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
@@ -254,8 +254,8 @@ function foundation_widgets() {
 			'id' => 'foundation_footer_four',
 			'name' => __( 'Footer Column #4', 'foundation' ),
 			'description' => __( 'Located in column four of the footer.', 'foundation' ),
-			'before_widget' => '<div class="large-3 columns">',
-			'after_widget' => '</div>',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
 			'before_title' => '<h5>',
 			'after_title' => '</h5>',
 		) );
